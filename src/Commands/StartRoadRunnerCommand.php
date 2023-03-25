@@ -206,6 +206,10 @@ class StartRoadRunnerCommand extends Command implements SignalableCommandInterfa
                     return $this->info($output);
                 }
 
+                if (! array_key_exists('msg', $debug)){
+                    return $this->info($output);
+                }
+
                 if (is_array($stream = json_decode($debug['msg'], true))) {
                     return $this->handleStream($stream);
                 }
