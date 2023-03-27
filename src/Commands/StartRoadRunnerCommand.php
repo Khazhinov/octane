@@ -221,7 +221,9 @@ class StartRoadRunnerCommand extends Command implements SignalableCommandInterfa
                 if ($debug['level'] == 'info'
                     && isset($debug['remote_address'])
                     && isset($debug['msg'])
-                    && $debug['msg'] == 'http log') {
+                    && $debug['msg'] == 'http log'
+                    && config('octane.roadrunner.show_routes')
+                ) {
                     [
                         'elapsed' => $elapsed,
                         'method' => $method,

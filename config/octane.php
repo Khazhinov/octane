@@ -218,4 +218,7 @@ return [
 
     'max_execution_time' => 30,
 
+    'roadrunner' => [
+        'show_routes' => env('ROADRUNNER_SHOW_ROUTES', true)
+    ]
 ];
